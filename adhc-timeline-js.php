@@ -4,7 +4,7 @@ Plugin Name: ADHC Timeline JS Plugin
 Plugin URI:
 Description: Custom Timeline Entry post type. Include shortcode to render timelines and single entries.
 Author: Tyler Grace (ADHC)
-Version: 2.5.2
+Version: 2.5.3
 Author URI:
 */
 
@@ -77,19 +77,18 @@ function my_acf_add_local_field_groups() {
 				'type' => 'textarea',
 				'instructions' => '',
 				'required' => 0,
-				'conditional_logic' => 0,
-				// 'conditional_logic' => array(
-				//     array(
-				//         array(
-				//             'field' => '',
-				//             'operator' => '==',
-				//         ),
-				//         array(
-				//             'field' => '',
-				//             'operator' => '==',
-				//         ),
-				//     ),
-				// ),
+				'conditional_logic' => array(
+				    array(
+				        array(
+				            'field' => '',
+				            'operator' => '==',
+				        ),
+				        array(
+				            'field' => '',
+				            'operator' => '==',
+				        ),
+				    ),
+				),
 				'wrapper' => array (
 					'width' => '',
 					'class' => '',
@@ -857,7 +856,7 @@ function my_acf_add_local_field_groups() {
 		'instruction_placement' => 'label',
 		'hide_on_screen' => array (
 			0 => 'permalink',
-			// 1 => 'the_content',
+			1 => 'the_content',
 			2 => 'excerpt',
 			3 => 'custom_fields',
 			4 => 'discussion',

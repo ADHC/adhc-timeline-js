@@ -2579,21 +2579,3 @@ function save_timeline_template( $post_id ) {
 
 }
 add_action('acf/save_post', 'save_timeline_template', 20);
-
-
-// function save_timeline_entries_content($post_id, $post, $update) {
-//     if ( "timeline-entries" != get_post_type($post_id) ) return;
-//
-// 	$timeline_entry_json = get_field('field_5a67645ad6229', $post_id);
-// 	$post = array(
-// 		'post_content' => 'POST_ID: '. $post_id . '<br>' . $timeline_header
-// 						  . $timeline_container . $timeline_init_1
-// 						  . $timeline_entry_json . $timeline_init_2,
-//   	);
-//
-//     remove_action( 'save_post', 'save_timeline_entries_content' );
-//     wp_update_post( $post );
-//     add_action( 'save_post', 'save_timeline_entries_content', 10, 3 );
-// }
-
-// add_action( 'save_post', 'save_timeline_entries_content', 10, 3 );
